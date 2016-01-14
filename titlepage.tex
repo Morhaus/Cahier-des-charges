@@ -24,31 +24,34 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{book}
+\documentclass{memoir}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[english]{isodate}
-\usepackage[parfill]{parskip}
+%\usepackage[parfill]{parskip}
 \usepackage{amsmath, amsfonts}
 
+\chapterstyle{section}
+
 \newcommand*{\plogo}{\fbox{$\mathcal{TFL}$}} % Generic publisher logo
+\newcommand*{\FR}{\emph{Fury Road}}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
+\newcommand*{\titleGM}{\begingroup
 \hbox{ % Horizontal box
-\hspace*{0.1\textwidth} % Whitespace to the left of the title page
-\rule{1pt}{\textheight} % Vertical line
-\hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
-\parbox[b]{0.75\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+\hspace*{0.01\textwidth}
+\rule{1pt}{\textheight}
+\hspace*{0.05\textwidth}
+\parbox[b]{0.75\textwidth}{
 
     {\noindent\Huge\bfseries Fury Road}\\[1\baselineskip] % Title
     {\large\textit{A game of cars, soccer and flying stuff}}\\[8\baselineskip]
 
-    \vspace{0.25\textheight} % Whitespace between the title block and the publisher
+    \vspace{0.37\textheight} % Whitespace between the title block and the publisher
     
     {\huge \textbf{Book of specifications}}\\[1\baselineskip] % Tagline or further description
     {\Large
