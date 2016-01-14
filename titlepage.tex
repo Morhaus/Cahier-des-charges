@@ -40,24 +40,26 @@
 
 \newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
 \hbox{ % Horizontal box
-\hspace*{0.2\textwidth} % Whitespace to the left of the title page
+\hspace*{0.1\textwidth} % Whitespace to the left of the title page
 \rule{1pt}{\textheight} % Vertical line
 \hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
 \parbox[b]{0.75\textwidth}{ % Paragraph box which restricts text to less than the width of the page
 
-    {\noindent\Huge\bfseries Fury Road}\\[2\baselineskip] % Title
-    {\large \textit{A game of soccer, cars and flying stuff}}\\[4\baselineskip] % Tagline or further description
-    {\Large
-        Tristan \textsc{Deloche}\\[0.25\baselineskip]
-        Simon \textsc{Goetz}\\[0.25\baselineskip]
-        Alexandre \textsc{Kirszenberg}\\[0.25\baselineskip]
-        Cyril \textsc{Olivier}
-    } % Author name
+    {\noindent\Huge\bfseries Fury Road}\\[1\baselineskip] % Title
+    {\large\textit{A game of cars, soccer and flying stuff}}\\[8\baselineskip]
 
-    \vspace{0.5\textheight} % Whitespace between the title block and the publisher
+    \vspace{0.25\textheight} % Whitespace between the title block and the publisher
+    
+    {\huge \textbf{Book of specifications}}\\[1\baselineskip] % Tagline or further description
+    {\Large
+            \textsc{Deloche} Tristan\\[0.25\baselineskip]
+            \textsc{Goetz} Simon\\[0.25\baselineskip]
+            \textsc{Kirszenberg} Alexandre\\[0.25\baselineskip]
+            \textsc{Olivier} Cyril\\[3\baselineskip]
+    } % Author name
 {\noindent
     $January~15,~2016$\\
-    The French Lions, Ltd. \plogo}\\[\baselineskip] % Publisher and logo
+    \large The French Lions, Ltd. \plogo}\\[\baselineskip] % Publisher and logo
 }}
 \endgroup}
 
@@ -70,3 +72,7 @@
 \pagestyle{empty} % Removes page numbers
 
 \titleGM % This command includes the title page
+
+\include{BOOKOFSPEC}
+
+\end{document}
