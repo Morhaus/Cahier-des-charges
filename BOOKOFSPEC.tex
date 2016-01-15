@@ -1,5 +1,6 @@
-\pagenumbering{arabic}
-\tableofcontents
+
+
+%\pagenumbering{arabic}
 
 \chapter{Introduction}
 
@@ -46,25 +47,234 @@ In short, this project is sure to bring us a lot of knowledge, discipline, stric
 
 \chapter{In-depth explanation of concept and gameplay}
 
+\paragraph{}Dreaming of a good car game? Or maybe a good soccer game? Then look no further, because we plan to mix them together in order to design the most creative, elegant, yet deceptively simple game ever: \FR. While some play soccer normally, we asked ourselves: How could soccer be even better? We came to one conclusion: Add cars.\\
+
+The concept in and out itself is quite elementary. Keep the idea of a field, two goals and a score, as well as pretty much all the rest. The only thing we are adding is the movement restriction – or freedom – imparted by the replacing of humans by cars. But it needs not end here! Let’s add boost: Players will be able to greatly increase the speed of their car limited amount of time.\\
+
+While this approach might seem rather odd to some, it holds great potential. Putting some restriction on movement greatly increases the difficulty of the game at first. However, after a while, the apparent complexity reveals its appeal. As the players’ skills grow, so do the pleasure and the satisfaction they’ll reap from the game.\\
+
+At its core, the game’s player flow will feature two parts: the menu, and the match. The menu will be welcoming us when we launch the game. Outside of games, it’ll be the place where the player spends most of its time. From there, they’ll be able to get into matches, change settings, customize their car, consult the leaderboards, and plenty more.\\
+
+The match part is the real interesting part. This is where the gameplay will truly shine. Matches will be 5 minutes long, and we mean real minutes. Any interruption time will not be taken into account by the clock. Players’ cars start the game at random predefined starting positions, where at least one player of each team will be able to get to the ball under a minimum amount of time. The clock starts when the ball is first touched, and the match goes on until a goal is scored or the timer runs out with equal scores on either side. Whenever a goal is scored, the game is temporarily stopped, the score of the scoring team is incremented, and cars are put back to random starting positions in time for the kick off.\\
+
+When the timer runs out, the team with the higher score wins the match. If both teams have the same score at the end of the imparted time, the game moves to overtime. In overtime, the first team to score will be crowned the winner. \\
+
+In order to stop players from boosting all of the time, they will only have a limited amount of boost. A gauge on the HUD will instruct the player on their remaining amount of boost. This limitation brings a new dimension to the game, where players must use their resources with consideration, lest they miss a goal opportunity. Strategically positioned canisters will allow the players to refill their boost gauge.\\
+
+The number of players in a match can vary. The plan is to have solo (1v1), doubles (2v2) and maybe even triples (3v3). Since the game relies mostly on multiplayer, there won’t be much to do in single player. A training arena will allow the player to practise alone with unlimited boost. Regarding matches in general, a single mode might be a limiter to the game. Different game modes with new rules will bring variety to the game. For instance, a VolleyBall mode, where the ball must not touch the ground.\\
 
 \chapter{Technological overview}
 
+\paragraph{}\FR will be developed on the Unity game engine. The Unity game engine was created specifically to allow fast prototyping and iteration without sacrificing quality. Its ease of use and myriad of features – namely 3D graphics [1], Physics [2], Networking [3] and others – make it a top choice for the development of a game project. Furthermore, Unity works cross-platform.\\
+
+While Unity offers a powerful and in-depth editor [], its main interest shines through its scripting capabilities. Absolutely essential in any game, Unity scripting will be the perfect way to precisely control the physical behaviour of the cars, create graphical effects and maybe even implement an AI system that goes further than just constantly moving towards the ball.\\
+
+All scripting[4] will be written in C\#, a strongly typed and secure programming language developed by Microsoft. Its powerful object-oriented paradigm will enable us to build lasting system-level components. Since Unity itself was written in C\#, and given our brand new knowledge of the language, it seems by far the most obvious choice.\\
+
+Fury Road will also heavily rely on physics[2]. Physics will dictate how the ball and other objects will interact with each other in game. As the default physics engine in Unity, as well as an industry standard, we hope that Nvidia PhysX will satisfy our needs. It is a powerful engine capable of real-time physics calculations on both the CPU and the GPU. More than 150 Triple-A games and tens of thousands developers use it. Among other cases, it will control the way the ball will move in the air or after a collision with a car, or the way cars will bounce back after hitting each other. Without it, we would have to ship our own simplistic physics engine. With a bit of luck and talent, the game might be playable, but not at all realistic and probably not enjoyable. Even though our idea is odd, the resulting game should feel right.\\
+
+But even though the road seems traced in front of us, we need to be careful with how we use the physics engine. Since our game is quite unique, we can not expect everything we need to be included in the default library of the physics engine. After research, we found out that while Unity features its own collision handler for car physics, it appears to have a few flaws. As such, we might have to create our own wheel simulation in order to best fit our needs.\\
+
+It goes without saying that a good multiplayer game should support playing against remote adversaries. As such, we’ll need to work with the networking part of Unity[3]. As with any physics-reliant game, synchronizing simulation across a wide range of client brings its fair share of issues. While it is possible, and perhaps even viable to use a peer-to-peer system, the absence of a centralized server to verify the physics calculation would be a huge limiting factor. Such a server could also be used to store player information and rankings. We will make up our mind along the way and decide which of the two options works best in our case.\\
+
+And finally, our game will also need interfaces[5], such as the main menu or the HUD in game. Unity features its own UI system, that we intend to use to its fullest extent: animating our on-screen elements will bring life to our interfaces, and Auto Layout will allow us to target a wide range of screen sizes.\\
 
 \chapter{Economical overview}
 
+\paragraph{}Regarding the economic side of the project, us being students still living at the expense of our parents, we do not expect it to cost a lot to develop. Both the game engine and physics engine are free. Sharing our code and advancement through a private Github repository will not be a problem since Github graciously offers students benefits that would otherwise cost money.\\
+
+The two only expenses the project might lead to will be in regard to the server we will use. Its purpose is to host the website, a SQL database to store information about our players, as well as your Unity game server. Since we might need a server with a bit of computing power, it could come to cost us 10\euro{} per month to rent a mighty beast. In the case we greatly overestimated our needs, Amazon Web Services offer students credit to use on their platform. We’ll also need to buy a domain name so as not to have to input a raw IP address to access the website.\\
 
 \chapter{Timetables}
 
-
+%FIRST SUBMISSION-------------------------------------------------------------------------%
 \section{First Submission}
-
-
+\begin{tabularx}{\textwidth}{|X|X|}
+  \hline
+  \textbf{Tristan} & \textbf{Simon} \\
+  \hline
+        \tabitem{Basic LAN multiplayer}
+            &
+        \tabitem{Menu design}\\
+        
+    %NEWLINE%    
+    
+        \tabitem{Basic server-based WAN multiplayer}
+            &
+        \tabitem{Menu interactions}\\
+        
+    %NEWLINE
+    
+        \tabitem{HUD}
+            &
+        \tabitem{Artwork, Sound design}\\
+        
+    %NEWLINE%
+    
+        \tabitem{In-game chat}
+            &
+        \tabitem{Camera}\\
+  \hline
+\end{tabularx}\\[2\baselineskip]
+%SECONDARRAY%
+\begin{tabularx}{\textwidth}{|X|X|}
+  \hline
+  \textbf{Alexandre} & \textbf{Cyril} \\
+  \hline
+        \tabitem{Basic physics simulation}
+            &
+        \tabitem{Wheels simulation} \\
+        
+    %NEWLINE%    
+    
+        \tabitem{Ball physics simulation}
+            &
+        \tabitem{Vehicle body and wheels joint} \\
+        
+    %NEWLINE
+    
+        \tabitem{Wiring controls to the physics simulation}
+            &
+        \tabitem{Wiring controls to the physics simulation} \\
+        
+    %NEWLINE%
+    
+        \tabitem{Website}
+            &
+        \tabitem{Camera} \\
+  \hline
+\end{tabularx}
+%SECOND SUBMISSION-------------------------------------------------------------------------%
 \section{Second Submission}
-
-
+\begin{tabularx}{\textwidth}{|X|X|}
+  \hline
+  \textbf{Tristan} & \textbf{Simon} \\
+  \hline
+        \tabitem{Collision handling on the server side}
+            &
+        \tabitem{Art and sound design}\\
+        
+    %NEWLINE%    
+    
+        \tabitem{Update system}
+            &
+        \tabitem{Vehicle models and textures}\\
+        
+    %NEWLINE
+    
+        \tabitem{Server ranking implementation}
+            &
+        \tabitem{Audio, gameplay and controls settings}\\
+  \hline
+\end{tabularx}\\[2\baselineskip]
+%%
+\begin{tabularx}{\textwidth}{|X|X|}
+  \hline
+  \textbf{Alexandre} & \textbf{Cyril} \\
+  \hline
+        \tabitem{Collisions simulation: ball/field, car/field, car/ball, car/car}
+            &
+        \tabitem{Collisions simulation: ball/field, car/field, car/ball, car/car} \\
+        
+    %NEWLINE%    
+    
+        \tabitem{Physics tweaks}
+            &
+        \tabitem{Physics tweaks} \\
+        
+    %NEWLINE
+    
+        \tabitem{Website improvements}
+            &
+        \tabitem{Simple AI} \\
+  \hline
+\end{tabularx}
+%THIRD SUBMISSION-------------------------------------------------------------------------%
 \section{Third Submission}
+\begin{tabularx}{\textwidth}{|X|X|}
+  \hline
+  \textbf{Tristan} & \textbf{Simon} \\
+  \hline
+        \tabitem{Secure account management}
+            &
+        \tabitem{Interface animations}\\
+        
+    %NEWLINE%    
+    
+        \tabitem{Player statistics}
+            &
+        \tabitem{Responsive interface}\\
+        
+    %NEWLINE
+    
+        \tabitem{Achievements}
+            &
+        \tabitem{In-game: lobby, servers list, player rankings}\\
+        
+    %NEWLINE%
+    
+        \tabitem{Server-client speed improvement}
+            &
+        \tabitem{Alternative-ruled game modes}\\
+  \hline
+\end{tabularx}\\[2\baselineskip]
+%%
+\begin{tabularx}{\textwidth}{|X|X|}
+  \hline
+  \textbf{Alexandre} & \textbf{Cyril} \\
+  \hline
+        \tabitem{Friction simulation}
+            &
+        \tabitem{AI improvements} \\
+        
+    %NEWLINE%    
+    
+        \tabitem{Physics tweaks}
+            &
+        \tabitem{Physics tweaks} \\
+        
+    %NEWLINE
+    
+        \tabitem{Balancing, control and gameplay tweaks}
+            &
+        \tabitem{Balancing, control and gameplay tweaks} \\
+        
+    %NEWLINE%
+    
+        \tabitem{Public website rankings}
+            &
+        \tabitem{Other game mods} \\
+  \hline
+\end{tabularx}\\[2\baselineskip]
+
+\paragraph{} Third submission is subject to uncertainties so there might be more depending on how well we manage our task timewise.
 
 
 \chapter{Conclusion}
 
-\chapter{Bibliography}
+\paragraph{}Such an undertaking should not be taken lightly. As a wise man once said, “Deadline is coming”. As such, we fully expect to have to make choices and compromises in order to deliver not necessarily the best, but the most functional version of our game. We have many ideas regarding what our game should be, but not all of them will make it to the final product. On the other hand, as we move through production, new paths and issues will appear in front of us. Whether good or bad, we can’t possibly expect to anticipate all of them. It will prove a challenge to overtake these unexpected occurrences, but we will learn a great deal of valuable lessons along the way.
+
+
+\chapter{Bibliography and references}
+
+\paragraph{\bfseries Unity's reference manual for 3D game development:}
+
+\begin{itemize}
+    \item[1.]{Graphics}{ \url{http://docs.unity3d.com/Manual/Graphics.html}}
+    \item[2.]{Physics}{ \url{http://docs.unity3d.com/Manual/PhysicsSection.html}}
+    \item[3.]{Unet}{ \url{http://docs.unity3d.com/Manual/UNet.html}}
+    \item[4.]{Scripting}{ \url{http://docs.unity3d.com/Manual/ScriptingSection.html}}
+    \item[5.]{UI}{ \url{http://docs.unity3d.com/Manual/UISystem.html}}
+\end{itemize}
+
+\paragraph{\bfseries Other links we used for research purposes:}
+
+\begin{itemize}
+    \item[1.]{}{ \url{http://www.nvidia.com/object/physx_faq.html}}
+    \item[2.]{}{ \url{http://www.digitaltrends.com/gaming/how-to-make-a-video-game/}}
+    \item[3.]{}{ \url{http://programmers.stackexchange.com/questions/125712/for-what-reasons-should-i-choose-c-over-java-and-c}}
+\end{itemize}
+
+
+
+

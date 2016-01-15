@@ -29,13 +29,21 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[english]{isodate}
+\usepackage{eurosym}
+\usepackage[hyphens]{url}
+\usepackage{booktabs}
+\usepackage{tabularx}
 %\usepackage[parfill]{parskip}
 \usepackage{amsmath, amsfonts}
+\usepackage[linktocpage=true]{hyperref}
+
 
 \chapterstyle{section}
 
 \newcommand*{\plogo}{\fbox{$\mathcal{TFL}$}} % Generic publisher logo
 \newcommand*{\FR}{\emph{Fury Road}}
+\newcommand{\tabitem}{~~\llap{$-$}~~}
+
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -75,6 +83,11 @@
 \pagestyle{empty} % Removes page numbers
 
 \titleGM % This command includes the title page
+\clearpage
+
+\renewcommand*\contentsname{Table of contents}
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\tableofcontents 
 
 \include{BOOKOFSPEC}
 
