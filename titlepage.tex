@@ -148,15 +148,21 @@ The concept in and out itself is quite elementary. Keep the idea of a field, two
 
 While this approach might seem rather odd to some, it holds great potential. Putting some restriction on movement greatly increases the difficulty of the game at first. However, after a while, the apparent complexity reveals its appeal. As the players’ skills grow, so do the pleasure and the satisfaction they’ll reap from the game.\\
 
-At its core, the game’s player flow will feature two parts: the menu, and the match. The menu will be welcoming us when we launch the game. Outside of games, it’ll be the place where the player spends most of its time. From there, they’ll be able to get into matches, change settings, customize their car, consult the leaderboards, and plenty more.\\
+At its core, the game will feature two parts: the menu, and the match. The menu will be welcoming us when we launch the game. Outside of games, it’ll be the place where the player spends most of its time. From there, they’ll be able to get into matches, change settings, customize their car, consult the leaderboards, and plenty more.\\
 
-The match part is the real interesting part. This is where the gameplay will truly shine. Matches will be 5 minutes long, and we mean real minutes. Any interruption time will not be taken into account by the clock. Players’ cars start the game at random predefined starting positions, where at least one player of each team will be able to get to the ball under a minimum amount of time. The clock starts when the ball is first touched, and the match goes on until a goal is scored or the timer runs out with equal scores on either side. Whenever a goal is scored, the game is temporarily stopped, the score of the scoring team is incremented, and cars are put back to random starting positions in time for the kick off.\\
+The match part is the real interesting part. This is where the gameplay will truly shine. Matches will be 5 minutes long, and we mean real minutes. Any interruption time will not be taken into account by the clock. Players’ cars start the game at random predefined starting positions, where at least one player of each team will be able to get to the in the same amount of time. The clock starts when the ball is first touched, and the match goes on until a goal is scored or the timer runs out with equal scores on either side. Whenever a goal is scored, the game is temporarily stopped, the score of the scoring team is incremented, and cars are put back to random starting positions in time for the kick off.\\
 
-When the timer runs out, the team with the higher score wins the match. If both teams have the same score at the end of the imparted time, the game moves to overtime. In overtime, the first team to score will be crowned the winner. \\
+Regarding the physics in game, cars will be able to move with the same exact maximum speed, without boost of course. If a car bumps another one, both cars will bounce back proportionally to how hard they were hit at. This will add the possibility of displacing adversaries to move someone playing goalie for example. The ball has normal physics, and can be moved proportionally to the speed of the car that hits it. If the ball is “pinched”, meaning it bounces quickly between two objects (car and car or car and wall), it will be propelled at huge speeds.\\ 
+
+When the timer runs out, the team with the higher score wins the match. If both teams have the same score at the end of the imparted time, the game moves to overtime. In overtime, the first team to score will be crowned the winner.\\
 
 In order to stop players from boosting all of the time, they will only have a limited amount of boost. A gauge on the HUD will instruct the player on their remaining amount of boost. This limitation brings a new dimension to the game, where players must use their resources with consideration, lest they miss a goal opportunity. Strategically positioned canisters will allow the players to refill their boost gauge.\\
 
-The number of players in a match can vary. The plan is to have solo (1v1), doubles (2v2) and maybe even triples (3v3). Since the game relies mostly on multiplayer, there won’t be much to do in single player. A training arena will allow the player to practise alone with unlimited boost. Regarding matches in general, a single mode might be a limiter to the game. Different game modes with new rules will bring variety to the game. For instance, a VolleyBall mode, where the ball must not touch the ground.\\
+The number of players in a match can vary. The plan is to have solo (1v1), doubles (2v2) and maybe even triples (3v3). Since the game relies mostly on multiplayer, there won’t be much to do in single player. A training arena will allow the player to practice alone with unlimited boost. The player will be able to play against a basic AI, to practice shoots with penalty shootouts.
+Regarding matches in general, a single mode might be a limiter to the game. Different game modes with new rules will bring variety to the game. For instance, a VolleyBall mode, where the ball must not touch the ground, or even a map without goals, only springboard, and unlimited boost.
+Eventually, a car game wouldn’t be a real one, without car’s customization! A lobby where you can choose the color of wheels or the chassis and cool car’s designs!
+The player will be able to choose between different arenas, and finally weather and time as rain or night. \\
+
 
 \chapter{Technological overview}
 
@@ -174,28 +180,78 @@ It goes without saying that a good multiplayer game should support playing again
 
 And finally, our game will also need interfaces[5], such as the main menu or the HUD in game. Unity features its own UI system, that we intend to use to its fullest extent: animating our on-screen elements will bring life to our interfaces, and Auto Layout will allow us to target a wide range of screen sizes.\\
 
-\chapter{Economical overview}
+\chapter{Economical overview \& Timetables}
 
 \paragraph{}Regarding the economic side of the project, us being students still living at the expense of our parents, we do not expect it to cost a lot to develop. Both the game engine and physics engine are free. Sharing our code and advancement through a private Github repository will not be a problem since Github graciously offers students benefits that would otherwise cost money.\\
 
-The two only expenses the project might lead to will be in regard to the server we will use. Its purpose is to host the website, a SQL database to store information about our players, as well as your Unity game server. Since we might need a server with a bit of computing power, it could come to cost us 10\euro{} per month to rent a mighty beast. In the case we greatly overestimated our needs, Amazon Web Services offer students credit to use on their platform. We’ll also need to buy a domain name so as not to have to input a raw IP address to access the website.\\
+The two only expenses the project might lead to will be in regard to the server we will use. Its purpose is to host the website, a SQL database to store information about our players, as well as your Unity game server. Since we might need a server with a bit of computing power, it could come to cost us 10\euro{} per month to rent a mighty beast. In the case we greatly overestimated our needs, Amazon Web Services offer students credit to use on their platform. We’ll also need to buy a domain name so as not to have to input a raw IP address to access the website.
+\newpage
 
+%\chapter{Tentative time schedules}
 \begin{landscape}
+
 \begin{table}[]
 \centering
-\caption{Detailed tentative schedule}
-%\resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|l|l|l|}
+\caption{First submission detailed work table}
+\label{my-label}
+\begin{tabular}{|lcccc|}
 \hline
-\textbf{}          & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}First Period\\ 8 weeks\\ Jan. 18 - Mar. 14\end{tabular}}}                                     & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Second Period\\ 8 weeks\\ Mar. 14 - May 2\end{tabular}}}                                     & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Third Period\\ 7 weeks\\ May 2 - Jun. 20\end{tabular}}}                                                       \\ \hline
-\textbf{Tristan}   & \begin{tabular}[c]{@{}l@{}}Basic LAN multi-\\ player\\ Basic server-based\\ WAN multiplayer\\ HUD\\ In-game chat\end{tabular}                        & \begin{tabular}[c]{@{}l@{}}Collision handling on\\ the server side\\ Update system\\ Server ranking imple-\\ mentation\end{tabular}                 & \begin{tabular}[c]{@{}l@{}}Secure account management\\ Player statistics\\ Achievements\\ Server-client speed improvement\end{tabular}                               \\ \hline
-\textbf{Simon}     & \begin{tabular}[c]{@{}l@{}}Menu design\\ Menu interactions\\ Artwork, Sound design\\ Camera\end{tabular}                                             & \begin{tabular}[c]{@{}l@{}}Art and sound design\\ Vehicle models and\\ textures\\ Audio, gameplay and\\ controls settings\end{tabular}              & \begin{tabular}[c]{@{}l@{}}Interface animations\\ Responsive interface\\ In-game: lobby,\\ servers list, player rankings\\ Alternative-ruled,game modes\end{tabular} \\ \hline
-\textbf{Alexandre} & \begin{tabular}[c]{@{}l@{}}Basic physics simulation\\ Ball physics simulation\\ Wiring controls to the\\ physics simulation\\ Website\end{tabular}   & \begin{tabular}[c]{@{}l@{}}Collisions simulation:\\ ball/field, car/field,\\ car/ball, car/car\\ Physics tweaks\\ Website improvements\end{tabular} & \begin{tabular}[c]{@{}l@{}}Friction simulation\\ Physics tweaks\\ Balancing, control and\\ gameplay tweaks\\ Public website rankings\end{tabular}                    \\ \hline
-\textbf{Cyril}     & \begin{tabular}[c]{@{}l@{}}Wheels simulation\\ Vehicle body and\\ wheels joint\\ Wiring controls to the\\ physics simulation\\ − Camera\end{tabular} & \begin{tabular}[c]{@{}l@{}}Collisions simulation:\\ ball/field, car/field,\\ car/ball, car/car\\ Physics tweaks\\ Simple AI\end{tabular}            & \begin{tabular}[c]{@{}l@{}}AI improvements\\ Physics tweaks\\ Balancing, control and\\ gameplay tweaks\\ Other game mods\end{tabular}                                \\ \hline
+\multicolumn{1}{|c}{\textbf{First submission}}                                                                    & \multicolumn{1}{l}{\textit{\textbf{Tristan}}} & \multicolumn{1}{l}{\textit{\textbf{Simon}}} & \multicolumn{1}{l}{\textit{\textbf{Alexandre}}} & \multicolumn{1}{l|}{\textit{\textbf{Cyril}}} \\ \hline
+\multicolumn{1}{|l|}{\textit{Basic LAN/WAN Multiplayer}}                                                          & \textbf{X}                                    & \textbf{X}                                  & \textbf{}                                       & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{Client-side collisions simulation}}                                                  & \textbf{}                                     & \textbf{}                                   & \textbf{X}                                      & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Basic car physics simulation}}                                                       & \textbf{}                                     & \textbf{}                                   & \textbf{X}                                      & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Basic ball physics simulation}}                                                      & \textbf{X}                                    & \textbf{}                                   & \textbf{X}                                      & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{\begin{tabular}[c]{@{}l@{}}Car wheel, wheel joints and\\ body physics\end{tabular}}} & \textbf{}                                     & \textbf{X}                                  & \textbf{}                                       & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Wiring controls to the simulation}}                                                  & \textbf{X}                                    & \textbf{}                                   & \textbf{X}                                      & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{HUD, In-game chat, Camera}}                                                          & \textbf{X}                                    & \textbf{}                                   & \textbf{}                                       & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Menus}}                                                                              & \textbf{}                                     & \textbf{X}                                  & \textbf{X}                                      & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{Artwork/Sound design}}                                                               & \textbf{}                                     & \textbf{X}                                  & \textbf{}                                       & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Website and server backend}}                                                         & \textbf{X}                                    & \textbf{}                                   & \textbf{X}                                      & \textbf{}                                    \\ \hline
 \end{tabular}
+\end{table}
 
-\end{table}\end{landscape}
+\begin{table}[]
+\centering
+\caption{Second submission detailed work table}
+\label{my-label}
+\begin{tabular}{|lcccc|}
+\hline
+\multicolumn{1}{|c}{\textbf{First submission}}                                                                                                    & \multicolumn{1}{l}{\textit{\textbf{Tristan}}} & \multicolumn{1}{l}{\textit{\textbf{Simon}}} & \multicolumn{1}{l}{\textit{\textbf{Alexandre}}} & \multicolumn{1}{l|}{\textit{\textbf{Cyril}}} \\ \hline
+\multicolumn{1}{|l|}{\textit{Game update system}}                                                                                                 & \textbf{X}                                    & \textbf{X}                                  & \textbf{}                                       & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{Server-side collisions simulation}}                                                                                  & \textbf{X}                                    & \textbf{}                                   & \textbf{X}                                      & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{\begin{tabular}[c]{@{}l@{}}Collisions simulation :\\ \\ - Car/Ball, Car/Field, Car/Car\\ - Ball/Field\end{tabular}}} & \textbf{}                                     & \textbf{}                                   & \textbf{X}                                      & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Physics improvement}}                                                                                                & \textbf{}                                     & \textbf{}                                   & \textbf{X}                                      & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Simple AI}}                                                                                                          & \textbf{}                                     & \textbf{X}                                   & \textbf{}                                       & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Server-side rankings implementation}}                                                                                & \textbf{X}                                    & \textbf{X}                                  & \textbf{}                                       & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{Vehicles' models and textures}}                                                                                      & \textbf{}                                     & \textbf{X}                                  & \textbf{}                                       & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Audio/Gameplay/Sound settings}}                                                                                      & \textbf{X}                                    & \textbf{X}                                  & \textbf{}                                       & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{Website improvements}}                                                                                               & \textbf{X}                                    & \textbf{}                                   & \textbf{X}                                      & \textbf{}                                    \\ \hline
+\end{tabular}
+\end{table}
 
+
+\begin{table}[]
+\centering
+\caption{Second submission detailed work table}
+\label{my-label}
+\begin{tabular}{|lcccc|}
+\hline
+\multicolumn{1}{|c}{\textbf{First submission}}                                                                                                                & \multicolumn{1}{l}{\textit{\textbf{Tristan}}} & \multicolumn{1}{l}{\textit{\textbf{Simon}}} & \multicolumn{1}{l}{\textit{\textbf{Alexandre}}} & \multicolumn{1}{l|}{\textit{\textbf{Cyril}}} \\ \hline
+\multicolumn{1}{|l|}{\textit{Friction simulation}}                                                                                                            & \textbf{}                                     & \textbf{}                                   & \textbf{X}                                      & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Improved AI}}                                                                                                                    & \textbf{}                                     & \textbf{X}                                  & \textbf{}                                       & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Physics tweaks}}                                                                                                                 & \textbf{}                                     & \textbf{}                                   & \textbf{X}                                      & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{Security for players' accounts}}                                                                                                 & \textbf{X}                                    & \textbf{X}                                  & \textbf{}                                       & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{Player statistics and schievements}}                                                                                             & \textbf{X}                                    & \textbf{}                                   & \textbf{}                                       & \textbf{X}                                   \\ \hline
+\multicolumn{1}{|l|}{\textit{\begin{tabular}[c]{@{}l@{}}Server and client multiplayer\\ fuctionnalities' improvements\end{tabular}}}                          & \textbf{X}                                    & \textbf{}                                  & \textbf{X}                                       & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{Balancing gameplay}}                                                                                                             & \textbf{}                                     & \textbf{X}                                  & \textbf{X}                                      & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{\begin{tabular}[c]{@{}l@{}}In-game UI overhaul\\ \\ (Lobby, servers' list, rankings,\\ alternative game modes...)\end{tabular}}} & \textbf{X}                                    & \textbf{X}                                  & \textbf{}                                       & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{Public website rankings}}                                                                                                        & \textbf{X}                                    & \textbf{}                                   & \textbf{X}                                      & \textbf{}                                    \\ \hline
+\multicolumn{1}{|l|}{\textit{Alternative game modes}}                                                                                                         & \textbf{}                                     & \textbf{X}                                  & \textbf{}                                       & \textbf{X}                                   \\ \hline
+\end{tabular}
+\end{table}
+\end{landscape}
+
+\paragraph{}Possible improvements in the case where the team would be ahead on time would be reactivity as well as quality of the graphics, further server-client speed improvements, anti-cheat system, localizations and a public API for modding purposes for example.
 
 \chapter{Conclusion}
 
